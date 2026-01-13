@@ -1,5 +1,5 @@
 # Nsda-Registration-Form Validation Project
-A fully interactive, client-side validated form with real-time validation and dynamic user feedback.
+I’ve successfully completed Task 2 of my Front-End Development Internship at Codveda Technology — building a fully interactive, client-side validated form with real-time validation and dynamic user feedback using HTML, CSS, and JavaScript!
 
 ## 🌐 Live Demo
 
@@ -44,5 +44,6 @@ form-validation-project/
 └── assets/             # Optional: images or icons
 ```
 
+
 *Last Updated: January 2024*  
-*Live Demo Hosted on Netlify*
+*Live Dem
