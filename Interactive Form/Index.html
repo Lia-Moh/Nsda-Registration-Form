@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSDA Registration</title>
+    
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+    
+    <!-- Main Container -->
+    <main class="container">
+        <div class="form-container">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="logo">
+                    <img src="assets/photo_1_2026-01-06_05-08-38.jpg" alt="NSDA Logo" class="logo-image">
+                    <div class="logo-text">
+                        <h1>NSDA</h1>
+                        <span>Nejm Student Developers Association</span>
+                    </div>
+                </div>
+                <div class="motto">
+                    <p>Empowering Muslim Students to Innovate, Thrive, and Uplift the Ummah.</p>
+                </div>
+            </header>
+
+            <!-- Registration Form -->
+            <form id="registrationForm" class="registration-form">
+                <!-- About You Section -->
+                <section class="form-section">
+                    <h2><i class="fas fa-user-circle"></i> About You</h2>
+                    
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Your Name <span class="required-star">*</span>
+                        </label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                        <div class="error-message" id="nameError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email Address <span class="required-star">*</span>
+                        </label>
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
+                        <div class="error-message" id="emailError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            <i class="fas fa-phone"></i> Phone Number <span class="required-star">*</span>
+                        </label>
+                        <input type="tel" id="phone" placeholder="Enter your number" required>
+                        <div class="error-message" id="phoneError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">
+                            <i class="fas fa-graduation-cap"></i> Current Status <span class="required-star">*</span>
+                        </label>
+                        <select id="status" required>
+                            <option value="">Select your current status</option>
+                            <option value="student">Student (Learning to Code)</option>
+                            <option value="beginner">Beginner Developer</option>
+                            <option value="intermediate">Intermediate Developer</option>
+                            <option value="graduate">Recent Graduate</option>
+                            <option value="working">Working Professional</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="statusError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">
+                            <i class="fas fa-heart"></i> Main Interest <span class="required-star">*</span>
+                        </label>
+                        <select id="interest" required>
+                            <option value="">What interests you most?</option>
+                            <option value="web">Web Development</option>
+                            <option value="mobile">Mobile Apps</option>
+                            <option value="ai">AI & Machine Learning</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="data">Data Science</option>
+                            <option value="cyber">Cybersecurity</option>
+                            <option value="game">Game Development</option>
+                        </select>
+                        <div class="error-message" id="interestError" aria-live="polite"></div>
+                    </div>
+                </section>
+
+                <!-- Account Setup Section -->
+                <section class="form-section">
+                    <h2><i class="fas fa-shield-alt"></i> Account Setup</h2>
+                    
+                    <div class="form-group password-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i> Password <span class="required-star">*</span>
+                        </label>
+                        <div class="password-container">
+                            <input type="password" id="password" placeholder="Create your password" required>
+                            <button type="button" class="password-toggle-btn" id="togglePassword" aria-label="Show password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="password-strength">
+                            <div class="strength-bar" id="strengthBar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                            <span class="strength-text" id="strengthText">Weak</span>
+                        </div>
+                        <div class="error-message" id="passwordError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">
+                            <i class="fas fa-lock"></i> Confirm Password <span class="required-star">*</span>
+                        </label>
+                        <div class="password-container">
+                            <input type="password" id="confirmPassword" placeholder="Re-enter your password" required>
+                            <button type="button" class="password-toggle-btn" id="toggleConfirmPassword" aria-label="Show confirm password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="error-message" id="confirmPasswordError" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referral">
+                            <i class="fas fa-user-friends"></i> How did you hear about us?
+                        </label>
+                        <select id="referral">
+                            <option value="">Select one</option>
+                            <option value="friend">Friend</option>
+                            <option value="social">Social Media</option>
+                            <option value="event">Dev Dialogue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Terms and Submission Section -->
+                <section class="form-section">
+                    <h2><i class="fas fa-check-circle"></i> Final Step</h2>
+                    
+                    <div class="terms-box">
+                        <div class="terms-content">
+                            <h3><i class="fas fa-handshake"></i> Our Promise</h3>
+                            <p>By joining NSDA, you become part of a community dedicated to:</p>
+                            <ul>
+                                <li><i class="fas fa-star"></i> Empowering Muslim developers</li>
+                                <li><i class="fas fa-code"></i> Learning and growing together</li>
+                                <li><i class="fas fa-users"></i> Supporting the Ummah through tech</li>
+                                <li><i class="fas fa-heart"></i> Respecting all members</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="agreement">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">
+                                <span class="required-star">*</span> I agree to join this amazing community
+                            </label>
+                            <div class="error-message" id="agreeError" aria-live="polite"></div>
+                        </div>
+
+                        <div class="newsletter">
+                            <input type="checkbox" id="newsletter" checked>
+                            <label for="newsletter">
+                                <i class="fas fa-bell"></i> Send me updates about events & opportunities
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn" disabled>
+                        <i class="fas fa-user-plus"></i> Join NSDA Community
+                    </button>
+                </section>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage" hidden>
+                <div class="success-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <h2>Welcome to NSDA! 😊</h2>
+                <p class="success-text">Alhamdulillah! You're now part of our growing family.</p>
+                
+                <div class="welcome-box">
+                    <h3><i class="fas fa-gem"></i> What's Next?</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> Check email for welcome message</li>
+                        <li><i class="fas fa-users"></i> Join our Telegram group</li>
+                        <li><i class="fas fa-calendar"></i> Watch for upcoming events</li>
+                    </ul>
+                </div>
+
+                <div class="success-actions">
+                    <a href="https://t.me/nsda_community" target="_blank" class="btn-community">
+                        <i class="fab fa-telegram"></i> Join Community
+                    </a>
+                    <button class="btn-another" id="resetBtn">
+                        <i class="fas fa-user-plus"></i> Register Friend
+                    </button>
+                </div>
+
+                <div class="social-links">
+                    <p>Connect with us:</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/company/nsda-community/" target="_blank" title="Join LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://t.me/nsda_community" target="_blank" title="Telegram Community">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://forms.gle/vQdGMNc5FnKJ6ZM78" target="_blank" title="for sisters only">
+                            <i class="fas fa-female"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="member-count">
+                    <div class="count-item">
+                        <i class="fas fa-users"></i>
+                        <span class="count-number" id="telegramCount">1,433</span>
+                        <span class="count-label">Telegram Members</span>
+                    </div>
+                    <div class="count-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="count-number" id="linkedinCount">550+</span>
+                        <span class="count-label">LinkedIn Followers</span>
+                    </div>
+                    <p class="count-growing">and growing! 🚀</p>
+                </div>
+                <p class="login-link">
+                    Already a member? <a href="#" id="signInLink"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                </p>
+            </footer>
+        </div>
+    </main>
+
+    <div class="float-buttons">
+        <a href="https://t.me/NejmAskBot" target="_blank" class="float-btn help-btn" title="Need Help? Ask our Bot">
+            <i class="fas fa-question-circle"></i>
+        </a>
+        <button class="float-btn theme-btn" id="themeToggle" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <script src="Index.js"></script>
+</body>
+</html>
