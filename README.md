@@ -43,7 +43,3 @@ form-validation-project/
 ├── README.md           # Project documentation (this file)
 └── assets/             # Optional: images or icons
 ```
-
-
-*Last Updated: January 2024*  
-*Live Dem
